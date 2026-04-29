@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="logo.jpg" alt="Information Extraction — Sammeln · Annotieren · Extrahieren · Bewerten · Entscheiden" width="100%" />
+</p>
+
 # LS Information Extraction — Hauptprojekt
 
 Diese Lernsituation baut eine **Pipeline zur strukturierten Informations-Extraktion** aus Stellenanzeigen — vom Daten-Sammeln über Hand-Annotation, eigene Cohen's-κ-Auswertung und ein eigenes lokales Sprachmodell (Qwen2.5-7B auf gauss) bis zum Frontier-LLM-Vergleich (Claude / ChatGPT) und einer Make-or-Buy-Entscheidung.
