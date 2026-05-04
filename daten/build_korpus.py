@@ -68,12 +68,14 @@ def reichere_mit_text_an(eintrag: dict, sleep: float = 0.4) -> dict:
         eintrag["text"] = ""
         eintrag["_detail_fehler"] = str(e)
         return eintrag
-    eintrag["text"] = d.get("stellenbeschreibung") or ""
-    eintrag["arbeitgeberdarstellung"] = d.get("arbeitgeberdarstellung")
-    eintrag["branchengruppe"] = d.get("branchengruppe")
-    eintrag["branche"] = d.get("branche")
-    eintrag["arbeitszeitmodelle"] = d.get("arbeitszeitmodelle")
-    eintrag["befristung"] = d.get("befristung")
+    eintrag["text"] = d.get("stellenangebotsBeschreibung") or ""
+    eintrag["stellenangebotsTitel"] = d.get("stellenangebotsTitel")
+    eintrag["verguetungsangabe"] = d.get("verguetungsangabe")
+    eintrag["vertragsdauer"] = d.get("vertragsdauer")
+    eintrag["arbeitszeitVollzeit"] = d.get("arbeitszeitVollzeit")
+    eintrag["quereinstiegGeeignet"] = d.get("quereinstiegGeeignet")
+    eintrag["istBefristet"] = d.get("istBefristet")
+    eintrag["stellenangebotsart"] = d.get("stellenangebotsart")
     time.sleep(sleep)
     return eintrag
 
