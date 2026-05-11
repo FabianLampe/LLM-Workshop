@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git -C /home/user/LLM-Workshop log --all --oneline -- notebooks/02_extract.ipynb)"
+    ]
+  }
+}
