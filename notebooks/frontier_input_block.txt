@@ -1,0 +1,815 @@
+Du bist Annotator für deutsche Stellenanzeigen. Annotiere jede Anzeige strikt nach folgendem Schema.
+Antworte ausschließlich mit einem JSON-Array, kein Text davor oder danach, kein Markdown-Codefence.
+
+SCHEMA (alle 7 Felder pro Anzeige zwingend, inkl. "id"):
+- "id": die Anzeige-ID exakt wie in === id: ... === oben
+- "homeoffice":      "ja" | "teilweise" | "nein" | "remote" | "nicht_genannt"
+- "vertragsart":     "ausbildung" | "festanstellung" | "praktikum" | "werkstudent" | "sonstiges"
+- "erfahrungslevel": "junior" | "mid" | "senior" | "egal" | "nicht_genannt"
+- "gehalt_min_eur":  ganze Zahl (Untergrenze, ohne Tausender-Trennung) ODER null
+- "gehalt_zeitraum": "monat" | "jahr" | null   (null nur, wenn gehalt_min_eur null)
+- "skills_top3":     Array mit max. 3 technischen Skills (oder leeres Array)
+
+DEFINITIONEN (Auszug aus Schema):
+- "remote"        = 100 % ortsunabhängig
+- "teilweise"     = hybrid / X Tage / mobiles Arbeiten / "Möglichkeit zum hybriden Arbeiten"
+- "ja"            = "Homeoffice" ohne Modalität
+- "nicht_genannt" = nur wenn Anzeige nichts dazu sagt
+- "junior"        = ≤ 2 Jahre Erfahrung; Ausbildung IMMER junior
+- "senior"        = ≥ 5 Jahre / "Senior"-Titel
+- skills_top3:    KEINE Soft Skills, KEINE Sprachen, KEINE Fachgebiete — nur Tools/Sprachen/Frameworks
+- Range "ab 50.000 €" → 50000 als Untergrenze
+
+BEISPIELE:
+
+=== id: 10000-1203863577-S ===
+1.400 Mitarbeiter. 24 Standorte weltweit. 60.000 Container im Umlauf. Seit der Gründung im Jahr 1972 befinden wir uns stetig auf Wachstumskurs. Wir sind Spezialisten für mobile Raumlösungen in Containerbauweise. Unser familiengeführtes Unternehmen wächst dynamisch, daher suchen wir weltweit stetig qualifizierte, freundliche sowie teamfähige Mitarbeiter in allen Bereichen.
+
+Du stehst mit deinen Kenntnissen, Talenten und Wünschen am Anfang deines Berufslebens. Bei ELA bekommst du eine abwechslungsreiche Berufsausbildung, bei der uns wichtig ist, dass du verschiedene Bereiche kennenlernst, denn wir wollen dich und deine Stärken weiterentwickeln. Interessiert? Dann sollten wir uns näher kennenlernen.
+
+**Deine zukünftige Rolle**
+
++ Unser IT-Team besteht aus ca. 50 Mitarbeitenden. Dabei arbeitest du gemeinsam mit den Kolleg:innen an IT-Aufgaben & Projekten. Während der 3-jährigen Ausbildung lernst du verschiedene Teilbereiche der IT kennen, wie zum Beispiel IT Helpdesk, IT-Data & Integration Management oder Enterprise Architecture Management.
+
++ Daten und Zahlen sind dein Metier? In der Ausbildung lernst du Daten logisch vor- und aufzubereiten, um zukünftig Arbeitsprozesse im Unternehmen zu vereinfachen. Dabei arbeitest du sehr eng mit den Abteilungen Controlling und Prozessmanagement zusammen.
+
+**Was du ins Team einbringst**
+
++ Mittlere Reife oder Hochschulreife
+
++ Gute Leistungen in Mathematik, Deutsch und Englisch
+
++ Sehr gute PC-Kenntnisse sowie Interesse an neuen Informationst
+
+Erwartete Annotation:
+{"id": "10000-1203863577-S", "homeoffice": "nicht_genannt", "vertragsart": "ausbildung", "erfahrungslevel": "junior", "gehalt_min_eur": null, "gehalt_zeitraum": null, "skills_top3": []}
+
+=== id: 11949-17214039-S ===
+Wien, Österreich
+Vollzeit/38,5 Std/Woche
+Ab wann kann es losgehen: Ab sofort
+
+Stellenbeschreibung
+Wir bauen unser Cyber Team aus und eröffnen dir individuelle Karrieremöglichkeiten mit spannenden Projekten. Unterstütze unserer Kundinnen und Kunden bei unterschiedlichen Themenstellungen im Cyber Security Umfeld. Bei uns findest du ein kollegiales Umfeld, in welchem du dich sowohl persönlich als auch fachlich weiterentwickeln und wachsen kannst. 
+
+Was dich erwartet:
+ * Du arbeitest hands-on an vielseitigen Cyber Security-Projekten - abhängig von deinen Stärken z. B. in Infrastruktur-, Cloud-, Application-, OT-Security, Red Teaming, DevSecOps oder IAM-Themen
+ * Du verantwortest die Analyse, Umsetzung und Verbesserung technischer Sicherheitslösungen von der Architektur bis zur Implementierung
+ * Du bringst dein technisches Know-how bei der Härtung von Systemen, der Segmentierung von Netzwerken, Mitarbeit im SOCs oder bei anderen komplexen Kundenszenarien ein
+ * Du wirst Teil eines erfahrenen, kollegialen Cyber-Teams, das sich gegenseitig unterstützt, Wissen teilt und gemeinsam innovative Lösungen entwickelt
+ * Du unterstützt beim Aufbau und der Pflege von Kundenbeziehungen, der Projektakquise sowie der Entwicklung des Angebotsportfolios.
+
+Qualifikationen
+ * Du bringst fundiertes technisches Verständnis in einem oder mehreren Bereichen der Cyber Security mit z. B. Netzwerksicherheit, Cloud-Plattformen, OT/IoT, Secure Coding, PenTesting, IAM oder Sicherheitsautomatisierung.
+ * Du h
+
+Erwartete Annotation:
+{"id": "11949-17214039-S", "homeoffice": "teilweise", "vertragsart": "festanstellung", "erfahrungslevel": "senior", "gehalt_min_eur": 46200, "gehalt_zeitraum": "Jahr", "skills_top3": ["PenTesting", "IAM", "Netzwerksicherheit"]}
+
+=== id: 13151-1568687-1-S ===
+Tätigkeitsbereich: Finanzen/Leasing & Banking
+Fachabteilung: BI Reporting & Risk Processes
+Gesellschaft: Mercedes-Benz Bank AG
+Standort: Stuttgart
+Startdatum: 01.06.2026
+Veröffentlichungsdatum: 01.06.2026
+Stellennummer: MER0004208
+Arbeitszeit: Részmunkaidő
+
+
+Aufgaben
+
+Werkstudententätigkeit gesucht? Business Intelligence bei der Mercedes-Benz Bank AG! Wir suchen Dich!
+
+Die Mercedes-Benz Bank AG bietet ab August 2026 eine Werkstudenten Stelle für unsere Business Intelligence Abteilung. Wenn Du Lust hast, in einem agilen Team mitzuarbeiten und spannende Aufgaben zu übernehmen, bist Du bei uns genau richtig!
+
+Diese Herausforderungen kommen u. a. auf Dich zu:
+
+- Anforderungsmanagement:
+- Detaillierung und Konkretisierung der fachlichen Anforderungen in enger Abstimmung mit dem Linienbetrieb und dem Systemverantwortlichen
+- Du übersetzt Business-Anforderungen in klare, technische Spezifikationen
+
+
+- Testdesign und Qualitätssicherung:
+-
+Entwurf, Erstellung und Durchführung fachlicher Tests zur Verifizierung der implementierten Anforderungen
+
+Hierdurch stellst Du sicher, dass unsere Lösungen den Qualitätsstandards entsprechen
+
+
+- Validierung:
+- Validierung der Produktinkremente in der Integrations- und Produktionsumgebung
+- Du begleitest den gesamten Prozess von der Entwicklung bis zum Go-Live
+
+
+- Dokumentation:
+- Aktualisierung und Pflege der fachlichen sowie technischen Systemdokumentation
+- Du sorgst für eine transparente und nachvollziehbare Dokumentation unserer Systeme
+
+
+- Zus
+
+Erwartete Annotation:
+{"id": "13151-1568687-1-S", "homeoffice": "teilweise", "vertragsart": "werkstudent", "erfahrungslevel": "mid", "gehalt_min_eur": null, "gehalt_zeitraum": null, "skills_top3": ["SQL"]}
+
+AUFGABE:
+Annotiere die folgenden 12 Anzeigen nach dem Schema oben. Antwort: ein JSON-Array
+mit 12 Objekten, in derselben Reihenfolge wie unten. Jedes Objekt enthält "id"
+plus die 6 Schema-Felder.
+
+ANZEIGEN:
+
+=== id: 16724-0062809539-S ===
+Die **Deutsche Getränke Logistik**(DGL) freut sich darauf, motivierte und engagierte Personen wie Sie begrüßen zu dürfen. Als Joint Venture-Unternehmen der renommierten Brauerei C. & A. Veltins und der Radeberger-Gruppe sind wir ein führender Getränkelogistikdienstleister in Deutschland. Wenn Sie also Lust auf eine spannende Herausforderung haben und in einem Unternehmen arbeiten möchten, das den Puls der Getränkebranche schlägt, dann sind Sie bei uns genau richtig!
+
+ 
+
+Zur Verstärkung unseres Teams in **Dortmund **suchen wir Sie als
+
+ 
+
+**Business Intelligence Specialist**** ****(m/w/d)**
+
+ 
+
+**Ihre Aufgaben:**
+
+  
+* Analyse, Konzeption, Design und Realisierung von Business Intelligence (BI) Lösungen mit Jedox und Power BI 
+* Mitgestaltung und Implementierung eines Data Warehouses 
+* Zusammenarbeit mit verschiedenen Abteilungen zur Erfassung und Umsetzung von Anforderungen  
+* Die Analyse von Plan-Ist-Abweichungen auf Monats- und Quartalsbasis, die Bewertung von Ergebnissen sowie die Ableitung von Handlungsempfehlungen  
+* Sie sind verantwortlich für die Erstellung des Management Reportings 
+* Die Erstellung von Business Cases und Bewertung von potenziellen Investitionsentscheidungen sind ebenfalls Bestandteil Ihrer Arbeit 
+
+ 
+
+**Ihr Profil:**
+
+  
+* Sie verfügen über sehr gute Kenntnisse und Verständnis hinsichtlich Technologien und Implementierung von Lösungen im BI Umfeld, speziell in der Entwicklung von BI-Applikationen mit Jedox und/oder Power BI 
+* Sie konnten bereits erste Berufserfahrung im Controlling, idealerweise im Logistikumfeld sammeln 
+* Neben fundierten Kenntnissen im CO, FI, SD, MM, im BI-Umfeld (Jedox & Power BI) verfügen Sie über gute bis sehr gute MS Office Kenntnisse (speziell Excel) 
+* Eine analytische, strukturierte und engagierte Arbeitsweise im Team ist für Sie selbstverständlich 
+* Eine positive und flexible Einstellung zu fortschrittlichen Arbeitsabläufen sowie die Fähigkeit, sich konstruktiv auf schnell ändernde Rahmenbedingungen einzustellen, runden Ihr Profil ab 
+* fließende Deutschkenntnisse 
+
+ 
+
+**Damit können wir glänzen:**
+
+  
+* Einer attraktiven und entwicklungsfähigen Vergütung 
+* Einem zukunftssicheren, modernen und langfristigen Arbeitsplatz 
+* Einem inspirierenden Arbeitsumfeld, in dem Ihre Ideen und Ihr Engagement geschätzt werden 
+* Vielen Weiterbildungs- und Entwicklungsmöglichkeiten 
+* Nicht nur kostenlosem Wasser und Kaffee, sondern einem bunten Mix an Softdrinks am Arbeitsplatz 
+* Wahlweise eine Kiste Cola oder Bier für Zuhause zu Ostern und Weihnachten als Feiertagsbonus 
+* Weiteren Extras wie vermögenswirksame Leistungen, Weihnachtsgeld, Corporate Benefits, Fahrradleasing sowie Firmenevents 
+* Rabatt auf Hotelübernachtungen 
+* Home-Office Möglichkeit 
+
+ 
+
+**NOCH FRAGEN?**
+
+ 
+
+Gerne besprechen wir die Details zu Ihren Aufgaben und unseren Leistungen mit Ihnen und freuen uns auf Ihre Kontaktaufnahme.
+
+ 
+
+Anna-Lena Wachsmuth  
+Tel.: +49 (231) 8866-252
+
+=== id: 18896-8565435-S ===
+https://de.erbegroup.com/de-de/
+**Für unseren Standort in Tübingen suchen wir für den Bereich Global Commercial Operations einen**
+# Business Intelligence Specialist (m/w/d)
+### IHRE VERANTWORTUNG
+- Betreuung und Weiterentwicklung des 
+   Business-Intelligence-Systems
+- Unterstützung bei der Integration der 
+   Tochterunternehmen in das BI System
+- Nutzung von Schnittstellen zu den operativen 
+   Systemen
+- First Level Support
+- Mitwirkung in bereichsübergreifenden Projekten
+### IHRE QUALIFIKATIONEN
+- Erfolgreich abgeschlossenes Studium der 
+   Wirtschaftsinformatik, Data Science oder 
+   vergleichbar
+- Optimalerweise Berufserfahrung in einer 
+   vergleichbaren Position
+- Idealerweise Kenntnisse in PowerBI
+- Erfahrung in der Programmierung von SQL-Abfragen 
+   und OLAP-Datenbanken
+- Konzeptionelles Denkvermögen, gutes 
+   Zahlenverständnis und analytische Fähigkeiten
+- Freude an der Aufbereitung und Darstellung von 
+   Daten für Geschäftsprozesse verschiedener 
+   Interessengruppen sowie gute kommunikative 
+   Fähigkeiten
+- Gute Deutsch- und Englischkenntnisse in Wort und 
+   Schrift
+### Wir bieten Ihnen:
+- Ergonomische Arbeitsplätze mit modernster Ausstattung
+- Breites, regionales Kantinenangebot mit Frühstück, 
+  Mittagessen sowie kostenfreien Getränken (Wasser, Kaffee)
+- Gute Vereinbarkeit von Familie und Beruf durch 
+  Unterstützung bei Ferienbetreuung sowie externe 
+  Beratungsangebote für alle Lebenslagen
+- Attraktive monatliche Vergütung mit tariflichen und 
+  außertariflichen Sonderzahlungen (Weihnachtsgeld, 
+  Urlaubsgeld etc.)
+- Arbeitszeitkonto für eine gewisse zeitliche Flexibilität 
+  sowie Möglichkeit zum hybriden Arbeiten
+- Breites internes und externes Trainingsangebot sowie 
+  Unterstützung bei Fort- und Weiterbildungen
+- Arbeitsplatz in einem familiengeführten Unternehmen in 
+  einer krisensicheren Branche
+### Haben wir Ihr Interesse geweckt?
+Dann freuen wir uns auf Ihre aussagekräftige Bewerbung mit Angabe Ihrer Gehaltsvorstellung und des frühestmöglichen Eintrittstermins. Bitte bewerben Sie sich über unser **[Karriereportal](https://karriere.erbe-med.de/persis/main?fn=next.job-application&action=apply&configKey=Internet&jobPostingId=776179296&headless=0)**.
+Erbe Elektromedizin GmbH · Waldhörnlestraße 17 · 72072 Tübingen · Germany · +49 7071 755-0 
+  · Ansprechpartnerin: Dorothee Fletterer
+
+=== id: 11949-17196786-S ===
+Einsatzort: 4870 Vöcklamarkt
+
+Dein Verantwortungsbereich
+* Entwicklung von prädiktiven Modellierungs- und Personalisierungslösungen
+* Analyse großer, regulierter Datensätze aus komplexen technischen Systemen (z. B. Ultraschallkonsolen)
+* Anwendung fortgeschrittener statistischer Verfahren sowie moderner Machine-Learning-Techniken
+* Gewinnung datenbasierter Erkenntnisse zur Unterstützung der Produktintelligenz
+* Optimierung der Systemleistung datengetriebener Systeme
+* Entwicklung von Personalisierungsansätzen basierend auf Nutzungs- und Systemdaten
+* Zusammenarbeit mit interdisziplinären Teams aus Engineering, Softwareentwicklung und Forschung
+
+Deine Vorteile bei uns
+* Unbefristeter Dienstvertrag
+* Flexible Arbeitszeitgestaltung durch Gleitzeitregelungen und Homeoffice
+* Ankommen und wohlfühlen mit unserem Onboarding-Programm
+* Prämienprogramm für Empfehlungen neuer Kolleg:innen
+* Fachliche und persönliche Weiterentwicklungsmöglichkeiten
+* Echter Teamspirit und Leidenschaft für das, was wir tun
+
+Dein Profil
+* Abgeschlossenes Studium (PhD oder Master) in Data Science, Statistik, Informatik, Engineering, angewandter Mathematik oder einer vergleichbaren quantitativen Disziplin mit relevanter Berufs- oder Forschungserfahrung
+* Fundierte Kenntnisse in statistischer Modellierung, Machine Learning und prädiktiver Analyse
+* Exzellente Python-Kenntnisse für Datenanalyse, Modellierung und Experimente
+* Erfahrung mit der Entwicklung prädiktiver Modelle auf großen, komplexen und regulierten Datensätzen
+* Fähigkeit, komplexe analytische Inhalte verständlich zu kommunizieren
+* Fließende Englischkenntnisse
+
+Lust auf die nächste Herausforderung? Dann sollten wir uns unbedingt kennenlernen! Am schnellsten geht es, wenn du dich direkt bewirbst - gern online oder per E-Mail unter der Kennziffer AOE50-28767-LZ bei Frau Suzana Divjak. Lass uns gemeinsam das nächste Level nehmen und Technologie nach vorn bringen!
+
+Für diese Position beträgt das Jahresbruttogehalt mindestens EUR 55.000 (auf Vollzeitbasis). Wir bieten eine marktkonforme Überzahlung abhängig von Ausbildung, beruflicher Qualifikation und Erfahrung.
+
+Hier Bewerben: https://recruiting.ferchau.com/at/de/data-scientist-502444?utm_campaign=jobs&utm_source=Arbeitsmarktservice+(ams.at)&utm_medium=cross-network&utm_term=50-28767-LZ&utm_content=bewerben_link
+
+=== id: 11949-17215590-S ===
+Art der Anstellung: Teilzeit bis Vollzeit (20 - 38,5 Stunden / Woche)
+
+Gehalt: € 3.100 (Brutto/Monat auf Vollzeitbasis)
+
+Ihre Aufgaben
+
+ * Eigenverantwortliche Beratung und Betreuung unserer Kund_innen in den Bereichen Datenschutz (DSGVO, DSG) sowie Informationssicherheit (ISMS, NISG / NIS-2)
+ * Unterstützung unserer Kund_innen bei der praktischen Umsetzung rechtlicher und organisatorischer Anforderungen
+ * Planung, Vorbereitung und Durchführung von Workshops, Schulungen, Audits und Kundenterminen, inklusive Dokumentation
+ * Mitarbeit bei der Erstellung, Pflege und Weiterentwicklung von Datenschutz- und Informationssicherheitsdokumentationen
+ * Laufende Recherche und Aufbereitung aktueller Entwicklungen im Bereich Datenschutz und Informationssicherheit
+
+Ihre Kompetenzen
+
+ * Abgeschlossene juristische, kaufmännische oder technische Ausbildung
+ * Idealerweise erste Kenntnisse oder praktische Erfahrung in einem oder mehreren der folgenden Bereiche: Datenschutz (DSGVO, DSG), Informationssicherheit / ISMS, NIS-2 / NISG 2026
+
+(keine zwingende Voraussetzung - gerne auch Quereinsteiger_innen mit Interesse am Thema)
+
+ * Interesse an rechtlichen, organisatorischen und technischen Zusammenhängen
+ * Selbständige, strukturierte Arbeitsweise und verantwortungsbewusstes Auftreten
+ * Teamfähigkeit, Kommunikationsstärke und Freude an Kundenkontakt
+ * Bereitschaft zu gelegentlichen Kundenterminen vor Ort
+ * Führerschein Klasse B und eigenes Kfz von Vorteil, aber nicht Voraussetzung
+
+Wir bieten Ihnen
+
+ * Spannende, abwechslungsreiche Projekte bei Gemeinden, Unternehmen und Organisationen
+ * Strukturierte Einarbeitung sowie umfassende Weiterbildungs- und Entwicklungsmöglichkeiten
+ * Ausbildung zum/zur zertifizierten Datenschutzbeauftragten
+ * Ausbildung zum/zur zertifizierten ISMS-Manager:in bzw. Auditor_in (bei Bedarf)
+ * Angenehmes Betriebsklima in einem wachsenden Beratungsunternehmen
+ * Sehr gute öffentliche Erreichbarkeit des Standorts
+
+Interesse geweckt?
+
+Dann freuen wir uns auf Ihre aussagekräftige Bewerbung per E-Mail an office@cleverdata.at
+
+=== id: 11949-17214039-S ===
+Wien, Österreich
+Vollzeit/38,5 Std/Woche
+Ab wann kann es losgehen: Ab sofort
+
+Stellenbeschreibung
+Wir bauen unser Cyber Team aus und eröffnen dir individuelle Karrieremöglichkeiten mit spannenden Projekten. Unterstütze unserer Kundinnen und Kunden bei unterschiedlichen Themenstellungen im Cyber Security Umfeld. Bei uns findest du ein kollegiales Umfeld, in welchem du dich sowohl persönlich als auch fachlich weiterentwickeln und wachsen kannst. 
+
+Was dich erwartet:
+ * Du arbeitest hands-on an vielseitigen Cyber Security-Projekten - abhängig von deinen Stärken z. B. in Infrastruktur-, Cloud-, Application-, OT-Security, Red Teaming, DevSecOps oder IAM-Themen
+ * Du verantwortest die Analyse, Umsetzung und Verbesserung technischer Sicherheitslösungen von der Architektur bis zur Implementierung
+ * Du bringst dein technisches Know-how bei der Härtung von Systemen, der Segmentierung von Netzwerken, Mitarbeit im SOCs oder bei anderen komplexen Kundenszenarien ein
+ * Du wirst Teil eines erfahrenen, kollegialen Cyber-Teams, das sich gegenseitig unterstützt, Wissen teilt und gemeinsam innovative Lösungen entwickelt
+ * Du unterstützt beim Aufbau und der Pflege von Kundenbeziehungen, der Projektakquise sowie der Entwicklung des Angebotsportfolios.
+
+Qualifikationen
+ * Du bringst fundiertes technisches Verständnis in einem oder mehreren Bereichen der Cyber Security mit z. B. Netzwerksicherheit, Cloud-Plattformen, OT/IoT, Secure Coding, PenTesting, IAM oder Sicherheitsautomatisierung.
+ * Du hast mindestens 3 Jahre Erfahrung im technischen Beratungsumfeld oder in der Leitung von IT-Security-Projekten
+ * Du verfügst über ein abgeschlossenes einschlägiges Studium oder anderweitig erworbene Fachkenntnisse
+ * Du arbeitest lösungsorientiert, eigenständig und hast Freude daran, auch tief in technische Fragestellungen einzutauchen
+ * Du überzeugst durch deine Kommunikationsfähigkeit in Deutsch und Englisch
+
+Erfüllst du nicht alle genannten Kriterien? Kein Problem! Uns ist bewusst, dass nicht jede_r alle Anforderungen erfüllen kann, deshalb sind wir bereit, in deine Entwicklung zu investieren.
+
+Zusätzliche Informationen
+Jahresbruttogehalt ab € 46.200,- (nicht All In) auf Level Consultant bzw. € 47.600,- (nicht All In) auf Level Senior Consultant. Deine Vergütung orientiert sich selbstverständlich an deiner individuellen Qualifikation und positionsrelevanten Berufserfahrung. Darüber hinaus erwarten dich attraktive Zusatzleistungen und Benefits.
+
+Make an impact that matters. Wir ermutigen dich, neue Verantwortungen zu übernehmen, dich aktiv in spannende Projekte einzubringen und wertvolle Erfahrungen zu sammeln. Im Gegenzug bieten wir dir exzellente Trainingsprogramme, um deine Karriereziele zu erreichen und dein volles Potenzial zu entfalten.
+
+Unsere Unternehmenskultur ist geprägt von starkem Zusammenhalt und unseren gemeinsamen Werten. Dabei ist uns das Wellbeing unserer Mitarbeitenden besonders wichtig. Außerdem bieten wir flexible Arbeitszeiten sowie die Möglichkeit im Home Office oder im Büro im Stadtzentrum zu arbeiten. 
+
+Auf deine Bewerbung freut sich: Theresa Glinzerer
+
+Für Fragen oder konkrete Unterstützung zur Barrierefreiheit wende dich bitte an barrierefreiheit@deloitte.at
+
+Focus on: Cyber Security, Informationssicherheit, Netzwerksicherheit, Beratung, Wien, Vollzeit 
+
+Wir freuen uns auf Deine Bewerbung https://ams.at/su/UjP9D
+
+=== id: 10000-1203863577-S ===
+1.400 Mitarbeiter. 24 Standorte weltweit. 60.000 Container im Umlauf. Seit der Gründung im Jahr 1972 befinden wir uns stetig auf Wachstumskurs. Wir sind Spezialisten für mobile Raumlösungen in Containerbauweise. Unser familiengeführtes Unternehmen wächst dynamisch, daher suchen wir weltweit stetig qualifizierte, freundliche sowie teamfähige Mitarbeiter in allen Bereichen.
+
+Du stehst mit deinen Kenntnissen, Talenten und Wünschen am Anfang deines Berufslebens. Bei ELA bekommst du eine abwechslungsreiche Berufsausbildung, bei der uns wichtig ist, dass du verschiedene Bereiche kennenlernst, denn wir wollen dich und deine Stärken weiterentwickeln. Interessiert? Dann sollten wir uns näher kennenlernen.
+
+**Deine zukünftige Rolle**
+
++ Unser IT-Team besteht aus ca. 50 Mitarbeitenden. Dabei arbeitest du gemeinsam mit den Kolleg:innen an IT-Aufgaben & Projekten. Während der 3-jährigen Ausbildung lernst du verschiedene Teilbereiche der IT kennen, wie zum Beispiel IT Helpdesk, IT-Data & Integration Management oder Enterprise Architecture Management.
+
++ Daten und Zahlen sind dein Metier? In der Ausbildung lernst du Daten logisch vor- und aufzubereiten, um zukünftig Arbeitsprozesse im Unternehmen zu vereinfachen. Dabei arbeitest du sehr eng mit den Abteilungen Controlling und Prozessmanagement zusammen.
+
+**Was du ins Team einbringst**
+
++ Mittlere Reife oder Hochschulreife
+
++ Gute Leistungen in Mathematik, Deutsch und Englisch
+
++ Sehr gute PC-Kenntnisse sowie Interesse an neuen Informationstechnologien
+
++ Interesse und Verständnis für (IT-) technische und betriebswirtschaftliche Abläufe und Zusammenhänge
+
++ Kommunikations- und Teamfähigkeit
+
++ Sehr gute Deutsch- und gute Englischkenntnisse in Wort und Schrift
+
+**Deine Benefits**
+
+- Abwechslungsreiche Tätigkeiten: Dich erwarten bei ELA eine abwechslungsreiche Tätigkeit in einem weltweit agierenden Unternehmen, ein unkomplizierter Umgang miteinander und vielfältige Möglichkeiten, deine eigenen Ideen einzubringen.
+
+- Azubi-Netzwerk: Unsere über 40 bereits beschäftigten Auszubildenden und dual Studierenden erleichtern dir den Start ins Berufsleben und stehen dir bei Fragen jederzeit zur Seite.
+
+- Höhenverstellbare Schreibtische: Deine Gesundheit liegt uns am Herzen: Daher bieten wir dir in jedem Büro höhenverstellbare Schreibtische an.
+
+- Corporate Benefits: Du bekommst im ELA-Vorteilsportal Corporate Benefits attraktive Rabatt-Angebote von über 1.500 Marken aus allen relevanten Lebensbereichen.
+
+- Azubiprojekte und -events: Erlebe neben deiner Arbeit spannende Azubi-Events und Projekte.
+
+- Sehr gute Übernahmechancen: Bei uns hast du sehr gute Übernahmechancen nach dem Ende deiner Ausbildungszeit.
+
+- Betriebsrestaurant: Unser Betriebsrestaurant versorgt dich täglich mit frischen und leckeren Mittagsgerichten.
+
+- Firmenfitness: Unser Firmenfitnessangebot: Tausende Fitnessstudios, Schwimmbäder etc. stehen dir für nur 25 € monatlich in ganz Deutschland und zum Teil auch digital uneingeschränkt zur Verfügung.
+
+- Hundefreundliches Büro: Auf deinen vierbeinigen Freund musst du bei uns nicht verzichten. Denn unter bestimmten Voraussetzungen kannst du deinen Hund einfach mit ins Büro bringen.
+
+**So einfach kannst du dich bewerben**
+Deine Unterlagen schickst du uns am besten direkt über unser Karriereportal unter www.karriere.container.de oder per E-Mail an melanie.eissing@container.de: Deinen Lebenslauf, die wichtigsten Zeugnisse und Qualifikationen. Dazu ein paar Zeilen, was dich ausmacht, warum wir zusammenpassen und wie du auf uns aufmerksam geworden bist. Im persönlichen Gespräch lernen wir uns dann am besten kennen. Wir freuen uns auf dich!
+
+**Noch Fragen?**
+Sprich uns gerne an - per WhatsApp, telefonisch oder per Mail:
+
+Melanie Eissing,
+
+HR Business Partnerin
+
+[melanie.eissing@container.de](mailto:melanie.eissing@container.de)[+49 170 3778087](tel: +49 170 3778087)
+
+WhatsApp
+
+[+49 151 19539616](tel:+49 151 19539616)
+
+Zusätzlich findest du auf unserem Instagram-Account ela_container viele Infos zur Ausbildung und bekommst erste Einblicke zum Arbeiten bei ELA.
+
+=== id: 13151-1570027-1-S ===
+Tätigkeitsbereich: Finanzen/Leasing & Banking
+Fachabteilung: BI Financial Backbone
+Gesellschaft: Mercedes-Benz Bank AG
+Standort: Stuttgart
+Startdatum: 01.08.2026
+Veröffentlichungsdatum: 01.08.2026
+Stellennummer: MER00041WS
+Arbeitszeit: Vollzeit
+
+
+Aufgaben
+
+Praktikum gesucht? Business Intelligence bei der Mercedes-Benz Bank AG! Wir suchen Dich!
+
+Die Mercedes-Benz Bank AG bietet ab August 2026 eine Praktikumsstelle für unser Business Intelligence Abteilung. Wenn Du Lust hast, in einem agilen Team mitzuarbeiten und spannende Aufgaben zu übernehmen, bist Du bei uns genau richtig!
+
+Was Du bei uns machst:
+
+Als Teil unseres agilen Produktteams hilfst Du uns, den Übergang in eine neue BI-Welt zu gestalten. Auch wenn unser aktuelles BI-System bald abgelöst wird, gibt es noch wichtige Anpassungen und Optimierungen in der bestehenden Systemlandschaft, bei denen Du aktiv mitwirken kannst.
+
+Diese Herausforderungen kommen u. a. auf Dich zu:
+
+-
+Monats- und Quartalsabschlüsse aktiv mitgestalten: Du unterstützt uns bei der Durchführung operativer Prozesskontrollprüfungen, um die Qualität und Korrektheit unserer Monats- und Quartalsabschlüsse sicherzustellen
+
+-
+Datenanalyse und Optimierung: Du analysierst Abweichungen, identifizierst Ursachen und leitest proaktiv Korrekturmaßnahmen ab, um unsere Prozesse kontinuierlich zu verbessern
+
+-
+Qualitätssicherung von BI-Systemen: Durch die Durchführung fachlicher Tests verifizierst Du implementierte Anforderungen neuer Entwicklungen in unseren Business Intelligence (BI)-Systemen und stellst sicher, dass unsere Lösungen höchsten Qualitätsstandards entsprechen
+
+-
+End-to-End-Validierung: Du begleitest die Validierung von BI-Produktinkrementen in der Integrations- und Produktionsumgebung und bist maßgeblich an der gesamten Testmethodik von der Entwicklung bis zum erfolgreichen Go-Live beteiligt
+
+-
+Zusätzliche Aufgaben: Je nach persönlichen Interessen bieten wir auch gerne Aufgaben an wie bspw. Unterstützung bei der Datenmodellierung und -integration
+
+
+Die Tätigkeit kann ab August 2026 beginnen.
+
+
+Qualifikationen
+
+-
+Studium im Bereich der (Wirtschafts-)Informatik, Mathematik, Statistik, Wirtschaftswissenschaften oder ein vergleichbarer Studiengang
+
+-
+Interesse an Datenanalyse, Business Intelligence und agilen Arbeitsmethoden
+
+-
+Erste Erfahrungen im Umgang mit Datenbanken (z.B. SQL) sind von Vorteil
+
+-
+Analytisches Denkvermögen und eine strukturierte Arbeitsweise
+
+-
+Hohe Eigeninitiative, Teamfähigkeit und Kommunikationsstärke
+
+
+Zusätzliche Informationen:
+
+Wir freuen uns auf Deine Online-Bewerbung mit Lebenslauf, Anschreiben, Zeugnissen, aktueller Immatrikulationsbescheinigung mit Angabe des Fachsemesters, ggf. Pflichtpraktikumsnachweis und Nachweis über die Regelstudienzeit. Bitte vergesse nicht im Online-Formular Deine Dokumente als "relevant für diese Bewerbung" zu markieren und beachten die maximale Dateigröße von 5 MB.
+
+Weiterführende Informationen zu den Einstellkriterien findest Duhier  .
+
+Schwerbehinderte und gleichgestellte Bewerbende sind herzlich willkommen! Die Schwerbehindertenvertretung (sbv@mercedes-benz.com) unterstützt Dich gerne im Bewerbungsprozess.
+
+HR Services hilft Dir bei Fragen zum Bewerbungsprozess gerne weiter. Du erreichst uns per E-Mail übermyhrservice@mercedes-benz.comoder telefonisch unter 0711/17-99000 (Mo-Fr 10-12 Uhr & 13-15 Uhr).
+
+
+Benefits
+
+
+- Barriere­frei­heit
+- Kantine, Café
+- Betriebs­arzt
+- Mobilitäts­angebote
+- Mit­arbeiter Events
+- Mit­arbeiter­rabatte möglich
+- Hybrides Arbeiten möglich
+- Betrieb­liche Alters­ver­sorgung
+- Park­platz
+- Gute An­bindung
+- Flexible Arbeits­zeit möglich
+
+
+Kontakt
+
+Patrick Waldenmaier
+Email: patrick.waldenmaier@mercedes-benz.com
+Siemensstraße 7
+70469 Stuttgart
+
+=== id: 13151-1568687-1-S ===
+Tätigkeitsbereich: Finanzen/Leasing & Banking
+Fachabteilung: BI Reporting & Risk Processes
+Gesellschaft: Mercedes-Benz Bank AG
+Standort: Stuttgart
+Startdatum: 01.06.2026
+Veröffentlichungsdatum: 01.06.2026
+Stellennummer: MER0004208
+Arbeitszeit: Részmunkaidő
+
+
+Aufgaben
+
+Werkstudententätigkeit gesucht? Business Intelligence bei der Mercedes-Benz Bank AG! Wir suchen Dich!
+
+Die Mercedes-Benz Bank AG bietet ab August 2026 eine Werkstudenten Stelle für unsere Business Intelligence Abteilung. Wenn Du Lust hast, in einem agilen Team mitzuarbeiten und spannende Aufgaben zu übernehmen, bist Du bei uns genau richtig!
+
+Diese Herausforderungen kommen u. a. auf Dich zu:
+
+- Anforderungsmanagement:
+- Detaillierung und Konkretisierung der fachlichen Anforderungen in enger Abstimmung mit dem Linienbetrieb und dem Systemverantwortlichen
+- Du übersetzt Business-Anforderungen in klare, technische Spezifikationen
+
+
+- Testdesign und Qualitätssicherung:
+-
+Entwurf, Erstellung und Durchführung fachlicher Tests zur Verifizierung der implementierten Anforderungen
+
+Hierdurch stellst Du sicher, dass unsere Lösungen den Qualitätsstandards entsprechen
+
+
+- Validierung:
+- Validierung der Produktinkremente in der Integrations- und Produktionsumgebung
+- Du begleitest den gesamten Prozess von der Entwicklung bis zum Go-Live
+
+
+- Dokumentation:
+- Aktualisierung und Pflege der fachlichen sowie technischen Systemdokumentation
+- Du sorgst für eine transparente und nachvollziehbare Dokumentation unserer Systeme
+
+
+- Zusätzliche Aufgaben:
+- Je nach persönlichen Interessen bieten wir auch gerne Aufgaben an wie bspw. Unterstützung bei der Datenmodellierung und -integration
+
+
+Die Tätigkeit kann ab Juni 2026 beginnen.
+
+
+Qualifikationen
+
+- Studium der (Wirtschafts-)Informatik, Mathematik, Statistik, Wirtschaftswissenschaften oder eines vergleichbaren Studiengangs
+- Interesse an Datenanalyse, Business Intelligence und agilen Arbeitsmethoden
+- Erste Erfahrungen im Umgang mit Datenbanken (z.B. SQL) sind von Vorteil
+- Analytisches Denkvermögen und eine strukturierte Arbeitsweise
+- Hohe Eigeninitiative, Teamfähigkeit und Kommunikationsstärke
+- Sichere Deutsch- und Englischkenntnisse in Wort und Schrift
+- Sicherer Umgang mit MS-Office
+- Engagement und Teamfähigkeit
+
+
+Benefits
+
+
+- Barriere­frei­heit
+- Kantine, Café
+- Betriebs­arzt
+- Mobilitäts­angebote
+- Mit­arbeiter Events
+- Mit­arbeiter­rabatte möglich
+- Hybrides Arbeiten möglich
+- Betrieb­liche Alters­ver­sorgung
+- Park­platz
+- Gute An­bindung
+- Flexible Arbeits­zeit möglich
+
+
+Kontakt
+
+Rebecca Höfer-Schmid
+Email: rebecca.hoefer@mercedes-benz.com
+Siemensstraße 7
+70469 Stuttgart
+
+=== id: 13644-307612-S ===
+Als Die Techniker gestalten wir die Krankenkasse von morgen. Dazu gehört die bestmögliche Arzneimittelversorgung. Mit 20 Kolleginnen und Kollegen im interdisziplinären Team Arzneimittel-Querschnittsfunktionen bearbeiten wir crossfunktionale Themen. Die Mitarbeitenden in der Datenanalyse übernehmen hier die Abrechnung von Rabattverträgen, das Vertragscontrolling, sowie die Durchführung komplexer Datenanalysen für den gesamten Fachbereich Arzneimittel.
+
+Bei uns erwarten dich flache Hierarchien und vielseitige berufliche Entwicklungsmöglichkeiten, anspruchsvolle Themen mit viel Eigenverantwortung und eine Menge Gestaltungsfreiheit. Dieser Freiraum spiegelt sich auch in der Work-Life-Balance wider. Individuelle Arbeitszeitregelungen und die Möglichkeit, anteilig remote zu arbeiten, sind bei uns gelebte Praxis.
+
+## Benefits
+
+- 35,5-Stunden-Woche
+- 30 Tage Urlaub und zusätzlich am 24.12. und 31.12. arbeitsfrei
+- Vermögenswirksame Leistungen
+- Zuschüsse zum Deutschlandjobticket
+- Betriebssport
+- Flexible Arbeitszeiten
+- Anteilig Home-Office
+
+## Deine Aufgaben
+
+- Apothekenabrechnungsdaten auswerten
+- Forderungsmanagement gegenüber Vertragspartnerinnen und Vertragspartnern betreiben
+- Ausschreibungen unterstützen und vorbereiten
+- Datenbankabfragen in SAS/SQL/Cognos durchführen
+- Rabattverträge abrechnen und im Haushalt einplanen
+
+## Dein Profil
+
+- Abgeschlossenes Studium der Wirtschaftswissenschaften oder eines MINT-Fachs, idealerweise mit datenspezifischem Schwerpunkt
+- Erfahrung in der Anwendung von SAS/SQL oder mindestens einer Programmiersprache von Vorteil
+- Kenntnisse des Arzneimittelmarktes wünschenswert
+- Selbstständige, ergebnis- und qualitätsorientierte Arbeitsweise
+- Teamfähigkeit und Leistungsbereitschaft
+
+## Haben wir dein Interesse geweckt?
+
+Dann freuen wir uns über deine Online-Bewerbung unter Angabe deines Eintrittstermins und deiner Gehaltsvorstellung bis zum 08.06.2026 unter www.tk.de/stellenmarkt
+
+Referenzcode: TK25327
+
+Wir sind stolz darauf, als Gesundheitspartner an der Seite unserer mehr als 12 Millionen Versicherten zu stehen. Über 15.000 Mitarbeitende gestalten dabei den Fortschritt und machen uns zu einer leistungsstarken Krankenkasse. Wir wachsen durch die Ideen unserer Mitarbeitenden - Innovation und Service stehen dabei im Mittelpunkt.
+
+Die Techniker Krankenkasse fördert die berufliche Integration von Menschen mit Behinderung sowie die Gleichstellung aller Geschlechter. Wir stehen für Chancengleichheit, Entwicklungsmöglichkeiten und einen respektvollen Umgang!
+
+Dein Kontakt
+
+Cara Rosenkranz  
+ Teamleiterin  
+ Tel. 040 - 69 09-33 48
+
+Silke Bengen  
+ Teamleiterin  
+ Tel. 040 - 69 09-34 67
+
+Sigrid Kruse  
+ Recruiterin  
+ Tel. 040 - 69 09-10 35
+
+=== id: 12265-489382_JB5131539-S ===
+Du teilst unsere Leidenschaft für Innovationen und Technologien und willst dich den Herausforderungen der Zukunft stellen? Dann komm zu FERCHAU: als Consultant Business Intelligence, der:die wie wir Technologien auf die nächste Stufe bringen möchte. Wir realisieren spannende Projekte für namhafte Anbieter und Entwickler von IT-Lösungen und stehen bei der digitalen Transformation mit umfassendem Know-how zur Seite. Du weißt genau, was du technologisch auf dem Kasten hast? Du suchst einen Arbeitgeber, der das genau erkennt, der dein Engagement wertschätzt und dir regelmäßig Weiterbildungsmöglichkeiten anbietet? Dann bewirb dich bei uns!
+
+## Consultant Business Intelligence (m/w/d)
+
+**Das ist zukünftig dein Job**
+* Analyse und Optimierung von Geschäftsprozessen
+* Aufnehmen und Analysieren der Anforderungen aus den Fachabteilungen
+* Implementierung und strategische Weiterentwicklung von Business Intelligence Lösungen
+* Erstellung von Berichten und Dashboards
+* Datenmodellierung und -analyse, Sicherstellung der Datenqualität
+* Schnittstellenfunktion zwischen den Fachabteilungen und der IT
+
+**Das erwartet dich bei uns**
+* Unbefristeter Arbeitsvertrag
+* Fachliche und persönliche Weiterentwicklungsmöglichkeiten
+* Flexibilität durch die Möglichkeit, mobil zu arbeiten
+* Networking und einfach Spaß haben bei Teamevents, Weihnachtsfeiern oder Sommerfesten
+* Bei uns kannst du Verantwortung übernehmen und dich weiterentwickeln
+* Echter Teamspirit und Leidenschaft für das, was wir tun
+
+**Das bringst du mit**
+* Abgeschlossenes Studium im Bereich Informatik, Wirtschaft oder vergleichbare Qualifikation
+* Berufserfahrung im Bereich Business Intelligence sowie Verständnis für Geschäftsprozesse und Unternehmensstrukturen
+* Erfahrung im Requirements Management und der Prozessmodellierung sowie mit verwandten IT-Tools
+* Erfahrung in der Erstellung von Berichten und Dashboards
+* Sehr gute Deutsch- und gute Englischkenntnisse
+
+Unser Angebot als Consultant Business Intelligence (m/w/d) ist wie für dich gemacht? Dann freuen wir uns auf deine Bewerbung - gern online unter der Kennziffer VA95-94775-UL bei Frau Elisabeth Hueske. Wir matchen: dein Potenzial und unsere Möglichkeiten. Challenge accepted? Starten wir gemeinsam das nächste Level und entwickeln die Zukunft!
+
+=== id: 14036-0005680f46a001-S ===
+Die Stabsstelle Zentrales Berichtswesen sucht zum nächstmöglichen Zeitpunkt eine*n
+
+Datenanalyst*in (m/w/d)
+
+Das Zentrale Berichtswesen hat die Aufgabe, bereichsübergreifend ein umfassendes Berichtswesen für den Klinikumsvorstand, die Kliniken und die Verwaltung am Universitätsklinikum Freiburg zu entwickeln und zu etablieren. Im Zentralen Berichtswesen sind die Kompetenzen der mit der Erstellung von Berichten am Klinikum befassten Mitarbeiter*innen institutionell zusammengeführt.
+
+Wir bieten Ihnen:
+
+- eine verantwortungsvolle und vielseitige Tätigkeit mit Gestaltungsspielraum in einem engagierten und kollegialen Team
+- einen modernen Arbeitsplatz mit zeitgemäßer technischer Ausstattung
+- flexible Arbeitsmöglichkeiten, inklusive der Option auf mobiles Arbeiten
+- ein umfangreiches Fort- und Weiterbildungsangebot im klinikumseigenen Fachbereich Fortbildung
+- Unterstützung bei Vereinbarkeit von Familie und Beruf
+- ein breites Angebot im betrieblichen Gesundheitsmanagement (z. B. eigenes Fitnessstudio UniFit, Bewegungskonzept, Hansefit)
+- zusätzliche Benefits wie ein bezuschusstes Jobticket UKF sowie Fahrradleasing
+
+Einblick in Ihre Aufgaben:
+
+-  Sie entwickeln das bestehende Berichtswesen kontinuierlich weiter, etablieren Standards und treiben die Automatisierung im Reporting voran
+
+-  Sie erstellen und konzipieren Lösungen für besondere (Ad-hoc-)Auswertungen
+
+-  Sie wirken bei der Aufbereitung, Zusammenführung und Analyse umfangreicher strukturierter Daten mit
+
+-  Sie unterstützen bei der Erfüllung externer Berichtspflichten (z. B. § 21 KHEntG, Krankenhausstatistik, PpUGV)
+
+Ihr Profil:
+
+-  Sie verfügen über ein abgeschlossenes Studium der (Wirtschafts-)Informatik, Volks- oder Betriebswirtschaftslehre oder über eine vergleichbare Qualifikation
+
+-  Sie besitzen fundierte Kenntnisse im Umgang mit den gängigen Microsoft-Office-Anwendungen
+
+-  idealerweise haben Sie Erfahrung mit SAP Business Objects und SAP Business Warehouse
+
+-  Programmierkenntnisse sowie Kenntnisse im Datenbankmanagement sind von Vorteil
+
+-  Sie zeigen Interesse an den wirtschaftlichen Rahmenbedingungen und Abläufen im Krankenhausumfeld
+
+-  analytisches Denkvermögen, Eigeninitiative, Kommunikationsstärke, ein gutes Selbstmanagement sowie eine ausgeprägte Lösungsorientierung runden Ihr Profil ab
+
+Interesse? Dann freuen wir uns auf Ihre Unterlagen bis zum 12.05.2026 online über den Bewerbungsbutton.
+
+Universitätsklinikum Freiburg
+Stabsstelle Zentrales Berichtswesen
+Gerd Auber - Stabsstellenleitung
+Breisacher Str. 153, 79110 Freiburg
+
+Fragen? Dann rufen Sie uns an oder schreiben eine E-Mail:
+
+Helen Lickert - Teamleitung
+0761/270-84760
+
+helen.lickert@uniklinik-freiburg.de
+
+=== id: 14225-2aaa34ba5c393d2a-S ===
+IU INTERNATIONAL UNIVERSITY - MyStudium - Because teaching is not just a job, it's a statement.
+
+
+You don't just want to teach, you want to make a difference? Then start at Germany's largest university and shape the future of teaching with us - in an environment that focuses on your professional and personal needs.
+
+
+Contribute to our academic world at our campus in Berlin as a freelance lecturer in MyStudium with 48 teaching units starting on 01.04.2026.
+ 
+	
+You teach fundamental knowledge with high practical relevance, e.g. for the topics Markov decision processes, Q-Learning, value functions, and exploration-exploitation tradeoff, and are responsible for correcting exams.
+	
+	
+	
+You design courses using high-quality teaching materials provided to you based on the coursebook (you can find more insights in the coursebook).
+	
+	
+	
+You conduct practical teaching sessions and tutorials on-site and promote an active and interactive learning process.
+	
+	
+	
+You support dual students in combining theory and practice and contribute to their personal and professional development.
+	
+	
+ 
+	
+You successfully completed a university degree in Data Science or a related field.
+	
+	
+	
+You have practical work experience in the relevant subject area.
+	
+	
+	
+Ideally, you already have initial experience (e.g., as a tutor, teacher, lecturer, or research assistant) in academic teaching.
+	
+	
+	
+You have a strong interest in innovative, digital, and modern education and enjoy working with students.
+	
+	
+	
+You have at least English language skills at C1 level and German language Skills at B2 level of the Common European Framework of Reference for Languages (CEFR).
+	
+	
+ 
+	
+Experience modern teaching: In small courses with a maximum of 40 students, you can carry out your teaching duties with full creative freedom.
+	
+	
+	
+Pass on your valuable knowledge…: Here with us, you impart valuable education to our knowledge-hungry students - A gift that is gladly shared.
+	
+	
+	
+Work flexibly: Experience the freedom of teaching and maximum flexibility with us.
+	
+	
+	
+Together we exceed expectations: We support one another, share lecture materials without restrictions, and cultivate an open, professional exchange.
+	
+	
+	
+Become part of the world's best team: Benefit from numerous networking opportunities and a respectful working atmosphere.
+	
+	
+	
+Experience innovation and dynamism: In an environment that embraces emerging technologies, AI-powered tools, and digital collaboration, we are shaping the future of education together.
+	
+	
+
+
+Teaching suits you - also on your CV! Apply easily with your CV, any certificates, and relevant work references and become part of our mission to make education accessible to all.
+
+
+What often sounds like dry theory comes to life with us - when practical knowledge is brought to the point. It’s about connecting theory with concrete examples, fostering talents, and preparing students for the future. Whether as part of your academic career or a passion alongside your main job: With your expertise and our flexibility, we shape the future - become a lecturer at IU International University!
+
+
+Please note that we are unfortunately unable to accept applications by e-mail for data protection reasons. If you are interested in several vacancies, we would ask you to apply for each vacancy separately.
+
+
+We back up our words with actions: We take our “Culture of Everyone“ seriously and want to make clear that no matter your origin, religion, gender, age, or personal orientation, we will welcome and accept you. Our doors stand also open to you if you have an impairing. We look forward to a diverse cooperation at IU!
+
+
+Freelance lectureship at IU - Start: 01.04.2026 - Teaching units: 48 - Locations: Berlin
+
+
