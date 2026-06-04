@@ -1,0 +1,137 @@
+[
+  {
+    "id": "16724-0062809539-S",
+    "homeoffice": "nicht_genannt",
+    "vertragsart": "festanstellung",
+    "erfahrungslevel": "mid",
+    "gehalt_min_eur": null,
+    "gehalt_zeitraum": null,
+    "skills_top3": [
+      "Power BI",
+      "Jedox",
+      "Data Warehouse"
+    ]
+  },
+  {
+    "id": "18896-8565435-S",
+    "homeoffice": "nicht_genannt",
+    "vertragsart": "festanstellung",
+    "erfahrungslevel": "mid",
+    "gehalt_min_eur": null,
+    "gehalt_zeitraum": null,
+    "skills_top3": [
+      "Power BI",
+      "SQL",
+      "OLAP"
+    ]
+  },
+  {
+    "id": "11949-17196786-S",
+    "homeoffice": "teilweise",
+    "vertragsart": "festanstellung",
+    "erfahrungslevel": "senior",
+    "gehalt_min_eur": null,
+    "gehalt_zeitraum": null,
+    "skills_top3": [
+      "Python",
+      "Machine Learning"
+    ]
+  },
+  {
+    "id": "11949-17215590-S",
+    "homeoffice": "nicht_genannt",
+    "vertragsart": "festanstellung",
+    "erfahrungslevel": "nicht_genannt",
+    "gehalt_min_eur": 3100,
+    "gehalt_zeitraum": "monat",
+    "skills_top3": [
+      "DSGVO",
+      "ISMS",
+      "NIS-2"
+    ]
+  },
+  {
+    "id": "11949-17214039-S",
+    "homeoffice": "teilweise",
+    "vertragsart": "festanstellung",
+    "erfahrungslevel": "senior",
+    "gehalt_min_eur": 46200,
+    "gehalt_zeitraum": "jahr",
+    "skills_top3": [
+      "PenTesting",
+      "IAM",
+      "Netzwerksicherheit"
+    ]
+  },
+  {
+    "id": "10000-1203863577-S",
+    "homeoffice": "nicht_genannt",
+    "vertragsart": "ausbildung",
+    "erfahrungslevel": "junior",
+    "gehalt_min_eur": null,
+    "gehalt_zeitraum": null,
+    "skills_top3": []
+  },
+  {
+    "id": "13151-1570027-1-S",
+    "homeoffice": "nicht_genannt",
+    "vertragsart": "praktikum",
+    "erfahrungslevel": "junior",
+    "gehalt_min_eur": null,
+    "gehalt_zeitraum": null,
+    "skills_top3": [
+      "SQL"
+    ]
+  },
+  {
+    "id": "13151-1568687-1-S",
+    "homeoffice": "teilweise",
+    "vertragsart": "werkstudent",
+    "erfahrungslevel": "junior",
+    "gehalt_min_eur": null,
+    "gehalt_zeitraum": null,
+    "skills_top3": [
+      "SQL"
+    ]
+  },
+  {
+    "id": "13644-307612-S",
+    "homeoffice": "teilweise",
+    "vertragsart": "festanstellung",
+    "erfahrungslevel": "nicht_genannt",
+    "gehalt_min_eur": null,
+    "gehalt_zeitraum": null,
+    "skills_top3": [
+      "SAS",
+      "SQL",
+      "Cognos"
+    ]
+  },
+  {
+    "id": "12265-489382_JB5131539-S",
+    "homeoffice": "teilweise",
+    "vertragsart": "festanstellung",
+    "erfahrungslevel": "nicht_genannt",
+    "gehalt_min_eur": null,
+    "gehalt_zeitraum": null,
+    "skills_top3": []
+  },
+  {
+    "id": "14036-0005680f46a001-S",
+    "homeoffice": "teilweise",
+    "vertragsart": "festanstellung",
+    "erfahrungslevel": "nicht_genannt",
+    "gehalt_min_eur": null,
+    "gehalt_zeitraum": null,
+    "skills_top3": []
+  },
+  {
+    "id": "14225-2aaa34ba5c393d2a-S",
+    "homeoffice": "nicht_genannt",
+    "vertragsart": "sonstiges",
+    "erfahrungslevel": "nicht_genannt",
+    "gehalt_min_eur": null,
+    "gehalt_zeitraum": null,
+    "skills_top3": []
+  }
+]
