@@ -49,7 +49,3 @@ Für **Recruiting-Filter** (Kandidat:in filtert "nur Remote", "nur Senior") zieh
 ## 5. Was ich aus Phase 5 gelernt habe
 
 Das überraschendste Disagreement war, dass **beide** Frontier-Modelle auf `homeoffice` dieselbe Abweichung machten wie mein Annotations-Partner in Phase 2 (κ Mensch↔Mensch dort nur 0.122): `nicht_genannt`, wo ich `ja`/`teilweise` annotiert hatte. Das ist kein Halluzinations-Befund, sondern ein **Schema-Befund** — mein Schema definiert nicht scharf genug, ob "Homeoffice" als bloßes Benefit-Stichwort schon `teilweise` zählt. Dass Mensch, ChatGPT und Claude alle an derselben Stelle auseinanderlaufen, zeigt: die Lücke liegt im Schema, nicht im Annotator. Frontier hat mir damit geholfen, mein eigenes Schema schärfer zu lesen, statt es nur als unzuverlässig abzustempeln.
-
----
-
-_Quellen: `notebooks/04_frontier_compare.ipynb` (κ-Tabelle, Disagreement-Liste), `annotation/frontier_kappa_chatgpt_claude.csv`, `annotation/frontier_disagreements_vs_gold.csv`, `annotation/meine_gold.csv`, `annotation/frontier_gold_chatgpt.csv`, `annotation/frontier_gold_claude.csv`._
