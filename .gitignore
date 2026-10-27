@@ -15,3 +15,7 @@ venv/
 
 # Pipeline-Outputs (zu groß fürs Repo, gehören nicht zur Bewertung)
 predictions*.jsonl
+
+# Claude Code
+.claude/settings.local.json
+.DS_Store
